@@ -1,5 +1,5 @@
 resource "aws_s3_bucket" "example_bucket" {
-  bucket = "swiggybucketwewsdewsde222"
+  bucket = "swiggy-buckefuvghvhgc11255"
 }
 
 resource "aws_s3_bucket_versioning" "example_versioning" {
