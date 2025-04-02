@@ -2,7 +2,7 @@
 resource "aws_autoscaling_group" "swiggy-web-asg" {
   name = "swiggy-web-asg"
   launch_template {
-    id      = aws_launch_template.swiggy-web-t01bd9d8f06d29d6a0 (template.id)
+    id      = aws_launch_template.swiggy-web-template.id
     version = "$Latest"
   }
   vpc_zone_identifier = [aws_subnet.swiggy-pub-sub-1.id, aws_subnet.swiggy-pub-sub-2.id]
