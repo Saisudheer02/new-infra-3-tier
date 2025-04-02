@@ -2,7 +2,7 @@
 resource "aws_autoscaling_group" "swiggy-web-asg" {
   name = "swiggy-web-asg"
   launch_template {
-    id      = aws_launch_template.swiggy-web-t01bd9d8f06d29d6a0 (emplate.id
+    id      = aws_launch_template.swiggy-web-t01bd9d8f06d29d6a0 (template.id)
     version = "$Latest"
   }
   vpc_zone_identifier = [aws_subnet.swiggy-pub-sub-1.id, aws_subnet.swiggy-pub-sub-2.id]
@@ -14,7 +14,7 @@ resource "aws_autoscaling_group" "swiggy-web-asg" {
 ###### Create a Launch Template for the EC2 instances ######
 resource "aws_launch_template" "swiggy-web-template" {
   name_prefix   = "swiggy-web-template"
-  image_id      = "ami-01bd9d8f06d29d6a0 "
+  image_id      = "ami-01bd9d8f06d29d6a0"
   instance_type = "t2.micro"
   key_name      = "devopsbyraham"
   network_interfaces {
